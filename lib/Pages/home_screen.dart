@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 class HomeScreen extends StatelessWidget {
   // Función para abrir el enlace del repositorio en el navegador
   void _launchURL() async {
-    const url = 'https://github.com/AlejandroLuna02';  // Cambia este URL por el de tu repositorio
+    const url = 'https://github.com/AlejandroLuna02/Flutter_ChatBot'; 
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -20,15 +20,13 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Logo centrado minimalista
             Center(
               child: Image.asset(
-                'assets/images/logo.jpg',  // Asegúrate de que el logo esté en la carpeta assets
+                'assets/images/logo.jpg',  
                 height: 100,
               ),
             ),
             SizedBox(height: 40),
-            // Información estilizada y simple
             Text(
               'Carrera: Ingeniería en Software',
               style: TextStyle(
@@ -57,7 +55,7 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Jesús Alejandro Guillen Luna',  // Aquí puedes colocar tu nombre
+              'Jesús Alejandro Guillen Luna',  
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
@@ -66,7 +64,7 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Matrícula: 221198',  // Coloca tu matrícula aquí
+              'Matrícula: 221198', 
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300,
@@ -74,9 +72,8 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40),
-            // Botón minimalista para ver repositorio
             ElevatedButton(
-              onPressed: _launchURL,  // Llamada para abrir el repositorio
+              onPressed: _launchURL,  
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white, backgroundColor: Colors.black87  ,
                 padding: EdgeInsets.symmetric(vertical: 15),
@@ -92,10 +89,8 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // Botón minimalista para ir al chatbot
             ElevatedButton(
               onPressed: () {
-                // Navegar a la pantalla del chatbot
                 Navigator.pushNamed(context, '/chat');
               },
               style: ElevatedButton.styleFrom(
